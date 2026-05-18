@@ -1,0 +1,17 @@
+---
+description: Never add AI or bot attribution to commits or project metadata
+alwaysApply: true
+---
+
+# No bot or AI attribution
+
+When creating git commits or preparing repositories for publication:
+
+- Do **not** add `Co-authored-by` trailers (including Cursor, Copilot, Claude, or any AI agent).
+- Do **not** set commit author/committer to bot or agent identities.
+- Do **not** add AI tools as authors in `package.json`, LICENSE, or README.
+- Use only the human owner's git identity for commits unless they specify otherwise.
+
+Exploration and MCP usage may mention Cursor or other clients as **tools** in documentation only — not as project contributors.
+
+Never add or modify `.github/workflows/` unless the user explicitly requests CI and reviews the workflow content.

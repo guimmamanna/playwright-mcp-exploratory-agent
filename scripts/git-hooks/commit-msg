@@ -1,0 +1,8 @@
+#!/bin/sh
+# Reject or strip AI/bot co-author trailers. Enable with:
+#   git config core.hooksPath scripts/git-hooks
+
+msg_file="$1"
+tmp=$(mktemp)
+grep -v -E '^Co-authored-by:.*(Cursor|cursoragent@cursor\.com|copilot|github-actions|dependabot)' "$msg_file" > "$tmp" || true
+mv "$tmp" "$msg_file"

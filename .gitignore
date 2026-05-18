@@ -1,0 +1,36 @@
+# Dependencies and build output
+node_modules/
+apps/dashboard/.next/
+apps/dashboard/out/
+dist/
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+
+# Playwright artifacts
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+tests/exploratory/*.generated.spec.ts
+
+# Local exploration output (keep examples/reports in git)
+/reports/
+/exploratory-results/
+
+# IDE and local tooling (keep committed agent rules)
+.cursor/*
+!.cursor/rules/
+!.cursor/rules/**
+.playwright-mcp/
+.vercel/
+apps/dashboard/.vercel/
+*.log
+.DS_Store
+
+# Session memory written during local runs (keep examples/reports tracked)
+reports/**/session-memory.json
+exploratory-results/**/session-memory.json
+.vercel

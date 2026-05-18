@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npm run dashboard:build",
+  "installCommand": "npm install",
+  "outputDirectory": "apps/dashboard/.next",
+  "framework": "nextjs"
+}

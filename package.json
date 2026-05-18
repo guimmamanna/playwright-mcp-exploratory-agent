@@ -1,0 +1,49 @@
+{
+  "name": "playwright-mcp-exploratory-agent",
+  "version": "1.0.0",
+  "description": "AI-assisted exploratory testing agent with Playwright MCP, multi-agent specialists, and a Next.js dashboard.",
+  "private": false,
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "apps/dashboard"
+  ],
+  "scripts": {
+    "test": "playwright test",
+    "test:unit": "playwright test tests/exploratory --grep-invert \"live-browser-exploration|distributed-exploration.harness\" --project=chromium",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report",
+    "explore": "node scripts/run-exploration.mjs",
+    "explore:headed": "HEADLESS=false node scripts/run-exploration.mjs",
+    "explore:distributed": "node scripts/run-distributed-exploration.mjs",
+    "explore:distributed:ci": "DISTRIBUTED_EXPLORATION=1 npx playwright test tests/exploratory/distributed-exploration.harness.spec.ts --project=chromium",
+    "dashboard:dev": "npm run dev --workspace=@playwright-mcp/dashboard",
+    "dashboard:build": "npm run build --workspace=@playwright-mcp/dashboard",
+    "dashboard:start": "npm run start --workspace=@playwright-mcp/dashboard",
+    "dashboard:test": "npm run test --workspace=@playwright-mcp/dashboard",
+    "postinstall": "node -e \"if(!process.env.VERCEL){require('child_process').execSync('npx playwright install chromium',{stdio:'inherit'})}\""
+  },
+  "keywords": [
+    "playwright",
+    "mcp",
+    "exploratory-testing",
+    "ai-testing",
+    "accessibility",
+    "test-automation"
+  ],
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "playwright": "^1.60.0",
+    "tsx": "^4.19.4"
+  },
+  "dependencies": {
+    "@playwright/mcp": "^0.0.75",
+    "axe-core": "^4.11.4",
+    "pixelmatch": "^7.2.0",
+    "pngjs": "^7.0.0"
+  }
+}

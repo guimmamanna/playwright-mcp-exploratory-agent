@@ -1,0 +1,10 @@
+{
+  "sessionId": "demo-session-001",
+  "status": "completed",
+  "findingsCount": 4,
+  "goalId": "demo-todomvc-smoke",
+  "startedAt": "2026-05-18T10:00:00.000Z",
+  "endedAt": "2026-05-18T10:05:12.000Z",
+  "baseUrl": "https://demo.playwright.dev/todomvc",
+  "stepsCompleted": 6
+}
