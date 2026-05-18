@@ -14,5 +14,4 @@ A commit authored as `build-bot <ci-bot@automated.dev>` added `.github/workflows
 ### Prevention
 
 - Enable `scripts/git-hooks` locally: `git config core.hooksPath scripts/git-hooks`
-- Project rule: `.cursor/rules/no-bot-attribution.mdc`
 - Never merge unsolicited workflow files.

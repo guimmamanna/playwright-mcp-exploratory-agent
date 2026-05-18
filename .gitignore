@@ -20,10 +20,8 @@ tests/exploratory/*.generated.spec.ts
 /reports/
 /exploratory-results/
 
-# IDE and local tooling (keep committed agent rules)
-.cursor/*
-!.cursor/rules/
-!.cursor/rules/**
+# IDE and local tooling
+.cursor/
 .playwright-mcp/
 .vercel/
 apps/dashboard/.vercel/
